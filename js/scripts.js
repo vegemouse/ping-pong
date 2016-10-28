@@ -38,6 +38,7 @@ $(function() {
     var input = $("input").val();
     var results = pingPong(input);
     $("#output").empty();
+    numbersList = [];
     results.forEach(function(result) {
       if (result === "ping pong") {
         $("#output").prepend("<li class=\"pingPong\">" + result + "</li>");
