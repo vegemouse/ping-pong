@@ -1,4 +1,4 @@
-var pingpong = function(number) {
+var pingPong = function(number) {
   var numberCount = 0;
   var numbersList = [];
   for (var i = 0; i < number; i++) {
@@ -23,10 +23,18 @@ $(function() {
   $("#pingpong").submit(function(event){
     event.preventDefault();
     var input = $("input").val();
-    var results = pingpong(input);
+    var results = pingPong(input);
     $("#output").empty();
     results.forEach(function(result) {
-      $("#output").append("<li>" + result + "</li>");
+      if (result === "PING-PONG") {
+        $("#output").append("<li class=\"pingPong\">" + result + "</li>");
+      } else if (result === "PONG") {
+        $("#output").append("<li class=\"pong\">" + result + "</li>");
+      } else if (result === "PING") {
+        $("#output").append("<li class=\"ping\">" + result + "</li>");
+      } else {
+        $("#output").append("<li>" + result + "</li>");
+      }
     })
   })
 })
