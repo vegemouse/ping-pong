@@ -25,6 +25,7 @@ h1 {
   color: #11CC77;
   font-family: 'Press Start 2P', monospace;
   padding-bottom: 5vh;
+  text-shadow: 5px 5px 0 #005522;
 }
 
 #description {
@@ -91,6 +92,7 @@ input:focus {
   height: 100px;
   font-size: 3em;
   color: #334455;
+  text-shadow: 5px 5px 0 #223344;
   font-family: 'Press Start 2P', monospace;
 }
 
@@ -104,6 +106,7 @@ input:focus {
 }
 
 .activated {
+  text-shadow: 5px 5px 0 #005522;
   color: #44AA66;
 }
 
