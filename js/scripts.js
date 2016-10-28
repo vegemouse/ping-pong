@@ -1,31 +1,23 @@
+var numberCount = 0;
+var numbersList = [];
 var pingPong = function(number) {
-
-  var numberCount = 0;
-  var numbersList = [];
-
   // Checks if number is positive
   if (number >= 0) {
-
     // Checks if number is too large
     if (number > 250) {
       var largeNumConfirm = confirm("Entering a number greater than 250 may cause the page to become unresponsive. Are you sure you want to enter " + number + "?");
     }
-
-    // Creates numbers list
     if (largeNumConfirm === true || number <= 250) {
-      for (var i = 0; i < number; i++) {
-        numberCount++;
-        numbersList.push(numberCount);
-      }
-
       // Replaces numbers
-      for (var i = 0; i < numbersList.length; i++) {
-        if (numbersList[i] % 15 === 0) {
+      for (var i = 0; i <= number; i++) {
+        if (i % 15 === 0) {
           numbersList[i] = "ping pong";
-        } else if (numbersList[i] % 5 === 0) {
+        } else if (i % 5 === 0) {
           numbersList[i] = "pong";
-        } else if (numbersList[i] % 3 === 0) {
+        } else if (i % 3 === 0) {
           numbersList[i] = "ping";
+        } else {
+          numbersList[i] = i;
         }
       }
     }
