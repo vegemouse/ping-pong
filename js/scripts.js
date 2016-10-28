@@ -20,20 +20,24 @@ var pingPong = function(number) {
 
 // Front end
 $(function() {
+  $("input").keypress(function() {
+    $(".btn").fadeIn(1500);
+  });
   $("#pingpong").submit(function(event){
     event.preventDefault();
+    $("#output").addClass("glow");
     var input = $("input").val();
     var results = pingPong(input);
     $("#output").empty();
     results.forEach(function(result) {
       if (result === "ping pong") {
-        $("#output").append("<li class=\"pingPong\">" + result + "</li>");
+        $("#output").prepend("<li class=\"pingPong\">" + result + "</li>");
       } else if (result === "pong") {
-        $("#output").append("<li class=\"pong\">" + result + "</li>");
+        $("#output").prepend("<li class=\"pong\">" + result + "</li>");
       } else if (result === "ping") {
-        $("#output").append("<li class=\"ping\">" + result + "</li>");
+        $("#output").prepend("<li class=\"ping\">" + result + "</li>");
       } else {
-        $("#output").append("<li>" + result + "</li>");
+        $("#output").prepend("<li>" + result + "</li>");
       }
     })
   })
