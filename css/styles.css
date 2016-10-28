@@ -1,3 +1,48 @@
+body {
+  background-color: #112233;
+  text-align: center;
+}
+
+h1 {
+  padding-bottom: 5vh;
+}
+
+#numbers {
+}
+
+#output {
+  list-style-position: inside;
+  padding-left: 0;
+  height: 30vh;
+  overflow: scroll;
+  background-color: #334455;
+  border-radius: 2px;
+  margin-top: 30px;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+input {
+  background-color: #334455;
+  border: none;
+  margin: 20px;
+  border-radius: 2px;
+  height: 60px;
+  width: 50%;
+  font-size: 3em;
+  text-align: center;
+}
+
+.container {
+  color: white;
+  padding-top: 20vh;
+  padding-bottom: 20vh;
+}
+
+#output li {
+  padding-top: 5px;
+}
+
 .pingPong {
   color: red;
 }

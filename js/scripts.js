@@ -8,11 +8,11 @@ var pingPong = function(number) {
 
   for (var i = 0; i < numbersList.length; i++) {
     if (numbersList[i] % 15 === 0) {
-      numbersList[i] = "PING-PONG";
+      numbersList[i] = "ping pong";
     } else if (numbersList[i] % 5 === 0) {
-      numbersList[i] = "PONG";
+      numbersList[i] = "pong";
     } else if (numbersList[i] % 3 === 0) {
-      numbersList[i] = "PING";
+      numbersList[i] = "ping";
     }
   }
   return numbersList;
@@ -26,11 +26,11 @@ $(function() {
     var results = pingPong(input);
     $("#output").empty();
     results.forEach(function(result) {
-      if (result === "PING-PONG") {
+      if (result === "ping pong") {
         $("#output").append("<li class=\"pingPong\">" + result + "</li>");
-      } else if (result === "PONG") {
+      } else if (result === "pong") {
         $("#output").append("<li class=\"pong\">" + result + "</li>");
-      } else if (result === "PING") {
+      } else if (result === "ping") {
         $("#output").append("<li class=\"ping\">" + result + "</li>");
       } else {
         $("#output").append("<li>" + result + "</li>");
