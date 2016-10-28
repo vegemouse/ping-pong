@@ -1,15 +1,12 @@
 var numberCount = 0;
 var numbersList = [];
 var pingPong = function(number) {
-  // Checks if number is positive
   if (number >= 0) {
-    // Checks if number is too large
     if (number > 250) {
       var largeNumConfirm = confirm("Entering a number greater than 250 may cause the page to become unresponsive. Are you sure you want to enter " + number + "?");
     }
     if (largeNumConfirm === true || number <= 250) {
-      // Replaces numbers
-      for (var i = 0; i <= number; i++) {
+      for (var i = 1; i <= number; i++) {
         if (i % 15 === 0) {
           numbersList[i] = "ping pong";
         } else if (i % 5 === 0) {
