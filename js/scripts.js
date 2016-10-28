@@ -5,7 +5,7 @@ var pingPong = function(number) {
   if (number >= 0) {
     // Checks if number is too large
     if (number > 300) {
-      var largeNumConfirm = confirm("Entering a number greater than 300 may cause the page to become unresponsive. Is this okay?");
+      var largeNumConfirm = confirm("Entering a number greater than 300 may cause the page to become unresponsive. Are you sure you want to enter " + number + "?");
     }
 
     if (largeNumConfirm === true || number <= 300) {
