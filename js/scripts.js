@@ -5,8 +5,13 @@ var pingpong = function(number) {
     numberCount++;
     numbersList.push(numberCount);
   }
+
+  for (var i = 0; i < numbersList.length; i++) {
+    if (numbersList[i] % 15 === 0) {
+      numbersList[i] = "PING-PONG"
+    }
+  }
   return numbersList;
-  numbersList = [];
 }
 
 // Front end
@@ -14,10 +19,10 @@ $(function() {
   $("#pingpong").submit(function(event){
     event.preventDefault();
     var input = $("input").val();
-    var result = pingpong(input);
+    var results = pingpong(input);
     $("#output").empty();
-    result.forEach(function(number) {
-      $("#output").append("<li>" + number + "</li>");
+    results.forEach(function(result) {
+      $("#output").append("<li>" + result + "</li>");
     })
   })
 })
