@@ -2,18 +2,23 @@ var pingPong = function(number) {
 
   var numberCount = 0;
   var numbersList = [];
+
+  // Checks if number is positive
   if (number >= 0) {
+
     // Checks if number is too large
-    if (number > 300) {
-      var largeNumConfirm = confirm("Entering a number greater than 300 may cause the page to become unresponsive. Are you sure you want to enter " + number + "?");
+    if (number > 250) {
+      var largeNumConfirm = confirm("Entering a number greater than 250 may cause the page to become unresponsive. Are you sure you want to enter " + number + "?");
     }
 
-    if (largeNumConfirm === true || number <= 300) {
+    // Creates numbers list
+    if (largeNumConfirm === true || number <= 250) {
       for (var i = 0; i < number; i++) {
         numberCount++;
         numbersList.push(numberCount);
       }
 
+      // Replaces numbers
       for (var i = 0; i < numbersList.length; i++) {
         if (numbersList[i] % 15 === 0) {
           numbersList[i] = "ping pong";
@@ -25,7 +30,7 @@ var pingPong = function(number) {
       }
     }
   } else {
-    alert("Please enter a positive number less than 300.");
+    alert("Please enter a positive number less than 250.");
   }
   return numbersList;
 }

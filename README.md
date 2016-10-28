@@ -34,6 +34,7 @@ No installation necessary. Simply clone the repository and open index.html. You 
 
 * JavaScript
 * jQuery
+* jQuery UI
 * Bootstrap
 
 ## Contact
